@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Sign in · Review Replies</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+  <main class="login-page">
+    <div class="login-card">
+      <div class="brand">
+        <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H11l-4 3v-3H4z"/><path d="m12 7.6.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z" fill="#fff" stroke="none"/></svg></div>
+        <span class="brand-name">Review Replies</span>
+      </div>
+      <h1>Sign in</h1>
+      <p class="secondary" id="login-sub">Admin access only.</p>
+      <form id="login-form" novalidate>
+        <div id="login-error" class="form-error hidden" role="alert"></div>
+        <label class="field" id="email-field">
+          <span>Email</span>
+          <input class="input" type="email" name="email" autocomplete="username" required autofocus>
+        </label>
+        <label class="field" id="password-field">
+          <span>Password</span>
+          <div class="pw-wrap">
+            <input class="input" type="password" name="password" autocomplete="current-password" required>
+            <button type="button" class="btn ghost sm pw-toggle" id="pw-toggle" aria-label="Show password">Show</button>
+          </div>
+        </label>
+        <label class="field hidden" id="code-field">
+          <span>Authentication code</span>
+          <input class="input" type="text" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]*" maxlength="7" placeholder="123 456">
+          <div class="field-hint">Open your authenticator app and enter the 6-digit code.</div>
+        </label>
+        <button class="btn primary" type="submit" id="login-btn">Sign in</button>
+      </form>
+      <p class="login-foot">Accounts are created by an administrator.</p>
+    </div>
+  </main>
+  <script src="/assets/login.js"></script>
+</body>
+</html>
