@@ -4,17 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Sign in · Review Replies</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/app.css">
+  <title>Sign in · {{TITLE}}</title>
+  {{HEAD}}
 </head>
-<body>
+<body data-brand="{{BRAND_NAME}}" data-app="{{APP_NAME}}" data-business="{{BUSINESS_NAME}}">
   <main class="login-page">
     <div class="login-card">
-      <div class="brand">
-        <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H11l-4 3v-3H4z"/><path d="m12 7.6.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z" fill="#fff" stroke="none"/></svg></div>
-        <span class="brand-name">Review Replies</span>
-      </div>
+      {{LOGO}}
       <h1>Sign in</h1>
       <p class="secondary" id="login-sub">Admin access only.</p>
       <form id="login-form" novalidate>

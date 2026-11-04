@@ -10,6 +10,7 @@ import {
   createSession, destroySession, requireAuth, csrfProtect, createUser,
   lockRemainingMs, recordLoginFailure, clearLoginFailures,
 } from '../auth.js';
+import { brand } from '../brand.js';
 
 const router = express.Router();
 
@@ -95,7 +96,7 @@ router.post('/account/2fa/setup', async (req, res) => {
   if (req.user.totpEnabled) throw new AppError('Two-factor authentication is already on.');
   const secret = generateTotpSecret();
   db.prepare('UPDATE users SET totp_secret_enc = ?, totp_enabled = 0 WHERE id = ?').run(encrypt(secret), req.user.id);
-  const uri = totpUri(secret, req.user.email);
+  const uri = totpUri(secret, req.user.email, `${brand.name} ${brand.appName}`.trim());
   res.json({ secret, uri, qr: await QRCode.toDataURL(uri, { margin: 1, width: 220 }) });
 });
 

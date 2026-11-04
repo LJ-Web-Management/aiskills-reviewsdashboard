@@ -8,6 +8,7 @@ import { db, cleanup } from './db.js';
 import { loadSession, requireAuth, csrfProtect, originCheck, ensureInitialAdmin } from './auth.js';
 import { isDemoMode } from './settings.js';
 import { seedDemoData } from './demo.js';
+import { brand, brandAssets, renderPage } from './brand.js';
 import { startScheduler } from './reviews.js';
 import authRoutes from './routes/auth.js';
 import reviewRoutes from './routes/reviews.js';
@@ -45,15 +46,16 @@ app.use(originCheck);
 
 // Static assets (CSS/JS/icons) are public; the pages and all data are behind login.
 app.use('/assets', express.static(path.join(PUBLIC, 'assets'), { maxAge: config.isProd ? '1h' : 0, index: false }));
+app.use('/brand', brandAssets);
 
 app.get('/login', (req, res) => {
   if (loadSession(req)) return res.redirect('/');
-  res.set('Cache-Control', 'no-store').sendFile(path.join(PUBLIC, 'login.html'));
+  res.set('Cache-Control', 'no-store').type('html').send(renderPage(path.join(PUBLIC, 'login.html')));
 });
 
 app.get('/', (req, res) => {
   if (!loadSession(req)) return res.redirect('/login');
-  res.set('Cache-Control', 'no-store').sendFile(path.join(PUBLIC, 'app.html'));
+  res.set('Cache-Control', 'no-store').type('html').send(renderPage(path.join(PUBLIC, 'app.html')));
 });
 
 app.get('/healthz', (req, res) => res.json({ ok: true }));
@@ -84,7 +86,7 @@ setInterval(cleanup, 3_600_000).unref();
 startScheduler();
 
 const server = app.listen(config.port, config.host, () => {
-  console.log(`Review Reply Admin running at ${config.appUrl} (listening on ${config.host}:${config.port})`);
+  console.log(`${brand.name === brand.appName ? brand.name : `${brand.name} ${brand.appName}`} running at ${config.appUrl} (listening on ${config.host}:${config.port})`);
   if (!config.secureCookies && config.isProd) console.warn('[security] APP_URL is not https. Serve this app over HTTPS in production.');
 });
 

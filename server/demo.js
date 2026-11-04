@@ -1,6 +1,7 @@
 // Sample reviews so the dashboard can be tried before Google is connected.
 // They are marked source = 'demo' and are removed automatically once a Google location syncs.
 import { db } from './db.js';
+import { brandDemo } from './brand.js';
 
 const DAY = 86_400_000;
 
@@ -56,16 +57,24 @@ const INCOMING = [
   ['Owen Murphy', 2, 'The sandwich was fine but the bread was stale.'],
 ];
 
+const DATA = {
+  seed: brandDemo?.seed || SEED,
+  incoming: brandDemo?.incoming || INCOMING,
+  thing: brandDemo?.thing || 'your visit',
+  signoff: brandDemo?.signoff || '— The Harbor & Pine team',
+};
+
 function firstName(name) {
   return name === 'A Google User' ? '' : ` ${name.split(' ')[0]}`;
 }
 
 function cannedReply(name, stars) {
   const n = firstName(name);
-  if (stars >= 5) return `Thank you so much${n}! We're thrilled you enjoyed your visit and can't wait to see you again soon.\n— The Harbor & Pine team`;
-  if (stars === 4) return `Thanks for the great review${n}! We're glad you had a good time, and we've passed your feedback on to the team.\n— The Harbor & Pine team`;
-  if (stars === 3) return `Thanks for the honest feedback${n}. We're always working to improve and hope we can make your next visit a five-star one.\n— The Harbor & Pine team`;
-  return `${n ? `Hi${n}, ` : ''}we're really sorry your visit fell short. That isn't the experience we want for anyone. Please reach out to us directly so we can make it right.\n— The Harbor & Pine team`;
+  const { thing, signoff } = DATA;
+  if (stars >= 5) return `Thank you so much${n}! We're thrilled you enjoyed ${thing} and hope to see you again soon.\n${signoff}`;
+  if (stars === 4) return `Thanks for the great review${n}! We're glad ${thing} worked well for you, and we've passed your feedback on to the team.\n${signoff}`;
+  if (stars === 3) return `Thanks for the honest feedback${n}. We're always working to improve and hope we can earn five stars from you next time.\n${signoff}`;
+  return `${n ? `Hi${n}, ` : ''}we're really sorry ${thing} fell short. That isn't the experience we want for anyone. Please reach out to us directly so we can make it right.\n${signoff}`;
 }
 
 export function seedDemoData() {
@@ -76,7 +85,7 @@ export function seedDemoData() {
     (external_id, source, reviewer_name, star_rating, comment, created_at, updated_at, status, suggested_reply, drafted_at, reply_text, reply_at, auto_approved, first_seen_at)
     VALUES (@external_id, 'demo', @name, @stars, @text, @created, @created, @status, @suggested, @drafted, @reply, @replyAt, @auto, @created)`);
   db.transaction(() => {
-    SEED.forEach(([name, stars, text, daysAgo, outcome], i) => {
+    DATA.seed.forEach(([name, stars, text, daysAgo, outcome], i) => {
       // Spread times through the day so charts look natural.
       const created = now - daysAgo * DAY - ((i * 7919) % 36_000_000);
       const reply = outcome === 'pending' || outcome === 'skipped' ? null : cannedReply(name, stars);
@@ -98,9 +107,9 @@ export function seedDemoData() {
 
 export function addIncomingDemoReview() {
   const used = new Set(db.prepare("SELECT external_id FROM reviews WHERE external_id LIKE 'demo-in-%'").all().map((r) => r.external_id));
-  const idx = INCOMING.findIndex((_, i) => !used.has(`demo-in-${i}`));
+  const idx = DATA.incoming.findIndex((_, i) => !used.has(`demo-in-${i}`));
   if (idx === -1) return null;
-  const [name, stars, text] = INCOMING[idx];
+  const [name, stars, text] = DATA.incoming[idx];
   const now = Date.now();
   db.prepare(`INSERT INTO reviews (external_id, source, reviewer_name, star_rating, comment, created_at, updated_at, status, first_seen_at)
               VALUES (?, 'demo', ?, ?, ?, ?, ?, 'pending', ?)`).run(`demo-in-${idx}`, name, stars, text, now, now, now);

@@ -88,6 +88,21 @@ docker run -d -p 3000:3000 --env-file .env -v review-data:/app/data review-repli
 
 ---
 
+## Branding
+
+Everything brand-specific lives in the `brand/` folder, so the same code can run under different brands:
+
+| File | Purpose |
+|---|---|
+| `brand/brand.json` | `name`, `appName`, default `businessName` for AI replies, and the logo/favicon file names |
+| `brand/theme.css` | Colour and font overrides (CSS custom properties for light and dark mode) |
+| `brand/demo.json` | Sample reviews shown in demo mode (optional) |
+| `brand/*.png`, `*.svg`, `*.ico`, `*.woff2` | Logo (`logo`, plus an optional `logoDark` for dark mode), favicon, fonts |
+
+Only image, font and CSS files in `brand/` are served to browsers. The JSON files stay private. Restart the server after changing anything in `brand/`.
+
+---
+
 ## Running on a Windows PC or laptop
 
 The dashboard runs whenever the PC is on. While it's off or asleep, the site is down and syncing pauses. No reviews are lost: the next sync catches up.

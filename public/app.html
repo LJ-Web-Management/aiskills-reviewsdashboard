@@ -4,17 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Review Replies</title>
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/app.css">
+  <title>{{TITLE}}</title>
+  {{HEAD}}
 </head>
-<body>
+<body data-brand="{{BRAND_NAME}}" data-app="{{APP_NAME}}" data-business="{{BUSINESS_NAME}}">
   <div class="shell" id="shell">
     <aside class="sidebar" id="sidebar">
-      <div class="brand">
-        <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H11l-4 3v-3H4z"/><path d="m12 7.6.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z" fill="#fff" stroke="none"/></svg></div>
-        <span class="brand-name">Review Replies</span>
-      </div>
+      {{LOGO}}
       <nav class="nav" aria-label="Main">
         <a href="#reviews" data-view="reviews">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H11l-4 3v-3H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
@@ -43,7 +39,7 @@
         <button class="btn ghost sm" id="menu-btn" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
-        <span class="brand-name">Review Replies</span>
+        {{LOGO}}
       </header>
       <main class="main" id="main" tabindex="-1">
         <div id="banners"></div>

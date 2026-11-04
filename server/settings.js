@@ -1,6 +1,7 @@
 import { config } from './config.js';
 import { db, getSetting, setSetting } from './db.js';
 import { AppError, encrypt, decrypt } from './security.js';
+import { brand } from './brand.js';
 
 // USD per 1M tokens. Estimates only; edit them in Settings to match https://openai.com/api/pricing
 export const DEFAULT_PRICING = {
@@ -29,7 +30,7 @@ export const LENGTHS = {
 };
 
 const DEFAULTS = {
-  businessName: '',
+  businessName: brand.businessName || '',
   tone: 'friendly',
   replyLength: 'medium',
   signature: '',

@@ -404,3 +404,15 @@ code { overflow-wrap: anywhere; }
   .sidebar { box-shadow: none; }
   .shell.nav-open .sidebar { box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); }
 }
+
+/* ---------- Brand logo ---------- */
+.brand-custom { flex-direction: column; align-items: flex-start; gap: 6px; }
+.brand-logo { display: block; height: 30px; width: auto; max-width: 100%; }
+.brand-sub { font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.login-card .brand-logo { height: 38px; }
+.login-card .brand { margin-bottom: 26px; }
+.sidebar .brand-custom { padding: 2px 8px 20px; }
+.topbar .brand-sub { display: none; }
+.topbar .brand-custom { padding: 0; }
+.topbar .brand-logo { height: 24px; }
+.topbar .brand-mark { width: 26px; height: 26px; }
