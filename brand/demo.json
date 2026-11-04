@@ -1,0 +1,300 @@
+{
+ "thing": "the course",
+ "signoff": "— The AI-Skills.Work team",
+ "seed": [
+  [
+   "Rachel Kim",
+   5,
+   "The AI for HR course was exactly what I needed. I rewrote our onboarding checklist with the prompt templates on day one.",
+   1,
+   "pending"
+  ],
+  [
+   "Marcus Bell",
+   4,
+   "Really practical examples for marketing teams. I would have liked a few more exercises on image tools, but overall great value.",
+   2,
+   "pending"
+  ],
+  [
+   "Deepa Nair",
+   2,
+   "Some of the videos in module 3 would not load on my work laptop and support took two days to reply. The content itself seemed good.",
+   2,
+   "pending"
+  ],
+  [
+   "A Google User",
+   5,
+   "",
+   3,
+   "pending"
+  ],
+  [
+   "Kevin O'Brien",
+   3,
+   "Good intro, but it felt a bit basic for someone who already uses ChatGPT every day. Hoping the advanced track goes deeper.",
+   4,
+   "pending"
+  ],
+  [
+   "Laura Fischer",
+   5,
+   "We put our whole finance team through the Excel and AI workshop. Month-end reporting is noticeably faster now. Highly recommend.",
+   5,
+   "pending"
+  ],
+  [
+   "Andre Silva",
+   1,
+   "I was charged for the team plan when I only signed up for one seat, and it took several emails to sort out.",
+   6,
+   "pending"
+  ],
+  [
+   "Megan Brooks",
+   4,
+   "Clear, role-specific lessons and a useful certificate at the end. The quizzes could be a little harder.",
+   7,
+   "pending"
+  ],
+  [
+   "Tyler Grant",
+   5,
+   "Finally an AI course about real work tasks instead of hype. The email-drafting module saved me hours.",
+   9,
+   "auto"
+  ],
+  [
+   "Nadia Hassan",
+   5,
+   "Loved the step-by-step prompts for customer service replies. Our team adopted them straight away.",
+   12,
+   "auto"
+  ],
+  [
+   "Chris Walker",
+   4,
+   "Solid course with good pacing. A couple of the screenshots are from an older version of the tools.",
+   14,
+   "manual"
+  ],
+  [
+   "Hannah Cole",
+   5,
+   "The instructor explained everything in plain language. Perfect for non-technical people like me.",
+   17,
+   "auto"
+  ],
+  [
+   "Victor Chen",
+   2,
+   "Expected live sessions but it was all pre-recorded. That should be clearer on the sales page.",
+   19,
+   "manual"
+  ],
+  [
+   "Sara Lindqvist",
+   5,
+   "Our operations managers use the meeting-summary workflow every week now. Great investment.",
+   22,
+   "auto"
+  ],
+  [
+   "Omar Farouk",
+   5,
+   "",
+   25,
+   "auto"
+  ],
+  [
+   "Jessica Moreno",
+   3,
+   "Useful material, though some lessons repeat the same points.",
+   28,
+   "manual"
+  ],
+  [
+   "Paul Robinson",
+   5,
+   "Practical, well organised and easy to follow. The sales prospecting lessons paid for themselves.",
+   33,
+   "auto"
+  ],
+  [
+   "Emma Schultz",
+   4,
+   "Great templates for writing job descriptions. Navigation in the course portal could be simpler.",
+   38,
+   "manual"
+  ],
+  [
+   "Daniel Park",
+   5,
+   "Took the project management track. The risk-register prompts are brilliant.",
+   42,
+   "replied"
+  ],
+  [
+   "Fiona Grant",
+   1,
+   "Could not access the course for a week after paying. Very frustrating.",
+   47,
+   "manual"
+  ],
+  [
+   "Ibrahim Yusuf",
+   5,
+   "Best AI training I have taken. Focused on getting real work done.",
+   51,
+   "auto"
+  ],
+  [
+   "Claire Dubois",
+   4,
+   "Very good course. Would love a version in French for our Paris office.",
+   56,
+   "manual"
+  ],
+  [
+   "Ryan Mitchell",
+   5,
+   "My whole team finished it in two weeks and we are already seeing results.",
+   63,
+   "auto"
+  ],
+  [
+   "Sophie Turner",
+   5,
+   "Friendly support team and great content. Thank you!",
+   70,
+   "replied"
+  ],
+  [
+   "George Adams",
+   3,
+   "Decent overview. Not much I could not find for free.",
+   77,
+   "skipped"
+  ],
+  [
+   "Priya Shah",
+   5,
+   "The data analysis lessons with AI were eye-opening. Clear and hands-on.",
+   84,
+   "auto"
+  ],
+  [
+   "Lucas Ferreira",
+   4,
+   "Good mix of video and exercises. The certificate looks professional.",
+   91,
+   "manual"
+  ],
+  [
+   "Amira Khalil",
+   5,
+   "Brilliant for teachers. I now plan lessons in half the time.",
+   99,
+   "replied"
+  ],
+  [
+   "Ben Carter",
+   2,
+   "Audio quality on a few videos is poor and hard to follow.",
+   106,
+   "manual"
+  ],
+  [
+   "Grace Liu",
+   5,
+   "Exactly the practical skills our admin team needed.",
+   113,
+   "auto"
+  ],
+  [
+   "Mateo Rossi",
+   5,
+   "Concise lessons that respect your time. Great work.",
+   121,
+   "replied"
+  ],
+  [
+   "Olivia Wright",
+   4,
+   "Very helpful, especially the prompt library.",
+   130,
+   "manual"
+  ],
+  [
+   "Noah Jensen",
+   5,
+   "Our support team's response times dropped after this course.",
+   140,
+   "auto"
+  ],
+  [
+   "Layla Hussein",
+   5,
+   "Engaging, practical and well paced.",
+   152,
+   "replied"
+  ],
+  [
+   "Sam Patel",
+   3,
+   "Okay course. Some modules felt rushed.",
+   165,
+   "manual"
+  ],
+  [
+   "Hannah Weber",
+   5,
+   "Recommended it to my whole department.",
+   178,
+   "auto"
+  ]
+ ],
+ "incoming": [
+  [
+   "Jordan Ellis",
+   5,
+   "The AI for Sales course gave me a prospecting routine I actually use every morning. Thank you!"
+  ],
+  [
+   "Mei Tanaka",
+   4,
+   "Great content for legal teams. A downloadable cheat sheet would make it perfect."
+  ],
+  [
+   "Luis Ortega",
+   5,
+   "¡Excelente curso! Muy práctico para mi trabajo diario."
+  ],
+  [
+   "Karen Doyle",
+   1,
+   "The certificate download link has been broken for three days."
+  ],
+  [
+   "Ahmed Rahman",
+   5,
+   ""
+  ],
+  [
+   "Tom Becker",
+   3,
+   "Helpful, but I expected more on data privacy when using AI tools."
+  ],
+  [
+   "Isla Morgan",
+   5,
+   "Our whole HR team completed it and loved the role-based approach."
+  ],
+  [
+   "Peter Novak",
+   2,
+   "Too much theory in the first module before getting to anything practical."
+  ]
+ ]
+}

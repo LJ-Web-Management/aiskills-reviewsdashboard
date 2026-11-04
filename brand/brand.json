@@ -1,1 +1,9 @@
-{ "name": "Review Replies", "appName": "Review Replies" }
+{
+  "name": "AI-Skills.Work",
+  "appName": "Review Replies",
+  "businessName": "AI-Skills.Work",
+  "website": "https://ai-skills.work",
+  "logo": "logo.png",
+  "logoDark": "logo-dark.png",
+  "favicon": "favicon.png"
+}

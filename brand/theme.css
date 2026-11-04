@@ -1,0 +1,47 @@
+/* AI-Skills.Work theme: navy #01335d + teal #96ddd9, Plus Jakarta Sans (colours taken from ai-skills.work) */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/brand/plus-jakarta-sans.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --page: #f4f7fb;
+  --surface: #fdfeff;
+  --surface-2: #eef2f7;
+  --surface-hover: #f0f4f9;
+  --text: #0b1625;
+  --text-2: #4a5568;
+  --border: rgba(1, 51, 93, 0.1);
+  --border-strong: rgba(1, 51, 93, 0.2);
+  --accent: #01335d;
+  --accent-hover: #0d4677;
+  --accent-soft: #e0f4f3;
+  --accent-text: #01335d;
+  --brand-2: #96ddd9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #020a17;
+    --surface: #0b1626;
+    --surface-2: #13213a;
+    --surface-hover: #142540;
+    --text: #f2f5f9;
+    --text-2: #b8c3d1;
+    --border: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.18);
+    --accent: #2b5885;
+    --accent-hover: #386a9c;
+    --accent-soft: #10304d;
+    --accent-text: #96ddd9;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #020a17; --surface: #0b1626; --surface-2: #13213a; --surface-hover: #142540;
+  --text: #f2f5f9; --text-2: #b8c3d1; --border: rgba(255, 255, 255, 0.1); --border-strong: rgba(255, 255, 255, 0.18);
+  --accent: #2b5885; --accent-hover: #386a9c; --accent-soft: #10304d; --accent-text: #96ddd9;
+}
+h1, h2, .tile .value { letter-spacing: -0.02em; }
+.nav a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--brand-2); }
