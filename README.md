@@ -88,6 +88,64 @@ docker run -d -p 3000:3000 --env-file .env -v review-data:/app/data review-repli
 
 ---
 
+## Running on a Windows PC or laptop
+
+The dashboard runs whenever the PC is on. While it's off or asleep, the site is down and syncing pauses. No reviews are lost: the next sync catches up.
+
+**1. Install and set up** (PowerShell, in the project folder, e.g. `C:\reviews-dashboard`):
+
+```powershell
+winget install OpenJS.NodeJS.LTS      # or download Node.js 22 LTS from nodejs.org, then reopen the terminal
+npm install
+copy .env.example .env                # edit it (see step 3)
+npm run create-user
+```
+
+**2. Start automatically at boot.** In an **Administrator** PowerShell, in the project folder:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\windows\install-autostart.ps1
+```
+
+This registers a scheduled task that starts the server at boot, before anyone logs in, and restarts it if it crashes. Logs go to `data\server.log`.
+
+**3. Give it a public HTTPS address with Cloudflare Tunnel** (free; your domain must use Cloudflare DNS). No router port-forwarding is needed, and your home IP stays hidden.
+
+1. Install it: `winget install --id Cloudflare.cloudflared`
+2. In the Cloudflare dashboard, open **Zero Trust → Networks → Tunnels → Create a tunnel** (type *Cloudflared*) and pick Windows. Run the `cloudflared.exe service install <token>` command it shows, in an Administrator terminal. That installs a Windows service that also starts at boot.
+3. Add a **public hostname**, e.g. `reviews.yourdomain.com` → service `HTTP` → URL `localhost:3000`.
+4. In `.env`:
+   ```
+   APP_URL=https://reviews.yourdomain.com
+   NODE_ENV=production
+   HOST=127.0.0.1
+   TRUST_PROXY=loopback
+   ```
+   `HOST=127.0.0.1` keeps the app off whatever Wi-Fi the laptop joins. Only the tunnel can reach it.
+5. Use `https://reviews.yourdomain.com/api/google/callback` as the Google OAuth redirect URI.
+
+No domain? Use [Tailscale Funnel](https://tailscale.com/kb/1223/funnel) instead. Run `tailscale funnel --bg 3000`, which gives you a permanent `https://<pc-name>.<tailnet>.ts.net` URL, and use that as `APP_URL`.
+
+**4. Stop the laptop from sleeping while plugged in** (Administrator PowerShell):
+
+```powershell
+powercfg /change standby-timeout-ac 0
+powercfg /change hibernate-timeout-ac 0
+powercfg /setacvalueindex SCHEME_CURRENT SUB_BUTTONS LIDACTION 0   # closing the lid does nothing on AC power
+powercfg /setactive SCHEME_CURRENT
+```
+
+**Day-to-day:**
+
+| Task | Command (Administrator PowerShell) |
+|---|---|
+| Restart after updating the code or `.env` | `Stop-ScheduledTask ReviewsDashboard; taskkill /F /IM node.exe; Start-ScheduledTask ReviewsDashboard` (this stops every Node process on the PC) |
+| Check it's running | open `http://localhost:3000/healthz`, or read `data\server.log` |
+| Remove auto-start | `Unregister-ScheduledTask -TaskName ReviewsDashboard -Confirm:$false` |
+| Back up | copy the `data` folder (it holds the database and, if `APP_SECRET` isn't set, the encryption key) |
+
+---
+
 ## Security details
 
 | Area | What's in place |
