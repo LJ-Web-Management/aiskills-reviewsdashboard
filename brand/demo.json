@@ -1,0 +1,301 @@
+{
+ "thing": "your visit",
+ "signoff": "— The Harbor & Pine team",
+ "businessName": "Harbor & Pine Café",
+ "seed": [
+  [
+   "Maya Thompson",
+   5,
+   "Best flat white in town, hands down. The staff remembered my order on my second visit, which made my morning.",
+   1,
+   "pending"
+  ],
+  [
+   "Daniel Okafor",
+   4,
+   "Lovely spot for a quiet work session. Wi-Fi was quick and the banana bread was excellent. Only wish there were more power outlets.",
+   2,
+   "pending"
+  ],
+  [
+   "Priya Raman",
+   2,
+   "Waited almost 25 minutes for two sandwiches on a Saturday and one order was wrong. Food was fine once it arrived, but the wait was frustrating.",
+   2,
+   "pending"
+  ],
+  [
+   "A Google User",
+   5,
+   "",
+   3,
+   "pending"
+  ],
+  [
+   "Lucas Meyer",
+   3,
+   "Coffee was good but the place was really loud and every table was sticky. Might come back on a weekday.",
+   4,
+   "pending"
+  ],
+  [
+   "Hannah Lee",
+   5,
+   "We had my daughter's birthday brunch here and the team went above and beyond. They even brought out a candle in her pancakes!",
+   5,
+   "pending"
+  ],
+  [
+   "Tom Becker",
+   1,
+   "Found a hair in my salad and when I mentioned it the server just shrugged. Not acceptable.",
+   6,
+   "pending"
+  ],
+  [
+   "Sofia Alvarez",
+   4,
+   "Great almond croissants and friendly baristas. Parking nearby is tricky though.",
+   7,
+   "pending"
+  ],
+  [
+   "James Carter",
+   5,
+   "Cozy, bright and the oat latte is perfect. My new favourite cafe.",
+   9,
+   "auto"
+  ],
+  [
+   "Emily Nguyen",
+   5,
+   "The breakfast burrito is huge and delicious. Staff were so welcoming.",
+   12,
+   "auto"
+  ],
+  [
+   "Oliver Smith",
+   4,
+   "Solid coffee, nice music, good vibe. A bit pricey but worth it.",
+   14,
+   "manual"
+  ],
+  [
+   "Chloe Martin",
+   5,
+   "Came for the matcha, stayed for the lemon tart. Absolutely lovely place.",
+   17,
+   "auto"
+  ],
+  [
+   "Noah Williams",
+   2,
+   "Ordered online for pickup and it wasn't ready for 15 minutes after the pickup time.",
+   19,
+   "manual"
+  ],
+  [
+   "Ava Johnson",
+   5,
+   "Dog friendly patio and they gave my pup a treat. 10/10.",
+   22,
+   "auto"
+  ],
+  [
+   "Liam Brown",
+   5,
+   "",
+   25,
+   "auto"
+  ],
+  [
+   "Isabella Garcia",
+   3,
+   "Food is tasty but portions felt small for the price.",
+   28,
+   "manual"
+  ],
+  [
+   "Ethan Davis",
+   5,
+   "Their seasonal pumpkin spice latte is not too sweet, just right. Friendly staff too.",
+   33,
+   "auto"
+  ],
+  [
+   "Mia Wilson",
+   4,
+   "Very good sourdough toast. Service was a little slow but friendly.",
+   38,
+   "manual"
+  ],
+  [
+   "Lucas Anderson",
+   5,
+   "Perfect spot to meet friends. Great playlist and comfy chairs.",
+   42,
+   "replied"
+  ],
+  [
+   "Zoe Taylor",
+   1,
+   "Rude barista at the counter this morning. Will not be back.",
+   47,
+   "manual"
+  ],
+  [
+   "Benjamin Thomas",
+   5,
+   "Best cinnamon rolls I have ever had. Fresh and warm.",
+   51,
+   "auto"
+  ],
+  [
+   "Grace Moore",
+   4,
+   "Nice atmosphere and tasty chai. Would love some vegan pastry options.",
+   56,
+   "manual"
+  ],
+  [
+   "Henry Jackson",
+   5,
+   "Consistently great coffee every single time.",
+   63,
+   "auto"
+  ],
+  [
+   "Lily White",
+   5,
+   "Staff are always smiling. Love supporting this local gem.",
+   70,
+   "replied"
+  ],
+  [
+   "Samuel Harris",
+   3,
+   "Average coffee, nice decor.",
+   77,
+   "skipped"
+  ],
+  [
+   "Ella Clark",
+   5,
+   "The avocado toast is next level. Will be back next weekend.",
+   84,
+   "auto"
+  ],
+  [
+   "Jack Lewis",
+   4,
+   "Good spot, friendly service, decent prices.",
+   91,
+   "manual"
+  ],
+  [
+   "Amelia Robinson",
+   5,
+   "Beautiful latte art and the quietest corner for reading.",
+   99,
+   "replied"
+  ],
+  [
+   "William Walker",
+   2,
+   "My cappuccino was lukewarm and the table hadn't been cleared.",
+   106,
+   "manual"
+  ],
+  [
+   "Harper Young",
+   5,
+   "Gorgeous little cafe, great service, amazing scones.",
+   113,
+   "auto"
+  ],
+  [
+   "Leo King",
+   5,
+   "Fantastic espresso. Owner clearly cares about quality.",
+   121,
+   "replied"
+  ],
+  [
+   "Aria Scott",
+   4,
+   "Great pastries, a bit crowded at lunch.",
+   130,
+   "manual"
+  ],
+  [
+   "Mason Green",
+   5,
+   "Always a pleasure. The team is wonderful.",
+   140,
+   "auto"
+  ],
+  [
+   "Layla Adams",
+   5,
+   "Excellent brunch menu and quick service.",
+   152,
+   "replied"
+  ],
+  [
+   "Ryan Baker",
+   3,
+   "Okay coffee. The muffins were a bit dry.",
+   165,
+   "manual"
+  ],
+  [
+   "Nora Hill",
+   5,
+   "My go-to cafe before work. Never disappoints.",
+   178,
+   "auto"
+  ]
+ ],
+ "incoming": [
+  [
+   "Ruby Campbell",
+   5,
+   "Stopped in on a rainy afternoon and the hot chocolate was exactly what I needed. Lovely team."
+  ],
+  [
+   "Arjun Mehta",
+   4,
+   "Good coffee and a calm space to work. Pastry case was nearly empty by 2pm."
+  ],
+  [
+   "Claire Dubois",
+   5,
+   "Le meilleur café du quartier ! Le personnel est adorable."
+  ],
+  [
+   "Marcus Reed",
+   1,
+   "Charged twice on my card and nobody could help me sort it out."
+  ],
+  [
+   "Elena Rossi",
+   5,
+   ""
+  ],
+  [
+   "Kenji Watanabe",
+   3,
+   "Nice latte, but the music was too loud to have a conversation."
+  ],
+  [
+   "Fatima Khan",
+   5,
+   "Gluten-free options that actually taste great. Thank you!"
+  ],
+  [
+   "Owen Murphy",
+   2,
+   "The sandwich was fine but the bread was stale."
+  ]
+ ]
+}
