@@ -5,5 +5,6 @@
   "website": "https://ai-skills.work",
   "logo": "logo.png",
   "logoDark": "logo-dark.png",
-  "favicon": "favicon.png"
+  "favicon": "favicon.png",
+  "theme": "theme.css"
 }
